@@ -1,102 +1,111 @@
+# VISUAL ENCODING OF TRAFFIC ACCIDENT DATA USING R
 
-**NAME: TEJASWINI M**
+**Name:** Tejaswini M  
+**Register Number:** 23BAD121  
+**Course:** Exploratory Data Analysis & Visualization
 
-**ROLL N0: 23BAD121**
+----------------------------------------------
 
-**Experiment Title**
+## 📌 Project Overview
 
-Visual Encoding of Data
+This project applies effective visual encoding principles to improve meaningful data communication.
 
-**Objective**
+A city traffic department analyzes accident records to identify high-risk zones and understand accident severity patterns. Proper visual encoding enables multiple variables to be represented simultaneously within a single visualization for clearer exploratory analysis.
 
-To apply effective visual encoding principles for meaningful data communication by representing traffic accident information using color, size, and shape.
+This lab demonstrates how color, size, and shape can effectively encode different accident attributes.
 
-**Scenario**
+-------------------------------------------------
 
-A city traffic department analyzes accident data to identify high-risk zones and accident severity patterns. Visual encoding is used to highlight severity levels, accident frequency, and accident types for better decision-making.
+## 🗂️ Dataset Information
 
-**Dataset**
+**File Name:** `4.traffic_accidents.csv`  
+**Type:** CSV file containing traffic accident records  
 
-File name: 4.traffic_accidents.csv
+-------------------------------------------------
 
-Dataset Attributes:
+## 📄 Key Attributes
 
-Accident_ID – Unique identifier for each accident
+- **Accident_ID** – Unique identifier for each accident  
+- **Vehicles_Involved** – Number of vehicles involved  
+- **Severity** – Level of accident severity (Minor, Major, Fatal)  
+- **Casualties** – Number of injured or deceased individuals  
+- **Accident_Type** – Type/category of accident  
 
-Location – Accident location type
+The dataset supports exploratory analysis of accident severity and frequency patterns.
 
-Date – Date of accident
+-------------------------------------------------
 
-Time – Time of accident
+## 🛠️ Tools & Libraries Used
 
-Accident_Type – Type of accident (Collision, Overturn, Skid)
+### Software
+- R  
+- RStudio  
 
-Severity – Severity of accident (Minor, Major, Fatal)
+### Libraries
+- `ggplot2` – Data visualization  
+- `dplyr` – Data preprocessing and transformation  
 
-Vehicles_Involved – Number of vehicles involved
+------------------------------------------------
 
-Casualties – Number of casualties
+## ⚙️ Implementation Steps
 
-**Libraries Used**
+### 1️⃣ Data Loading & Preparation
 
-ggplot2 – For data visualization
+- Imported dataset using `read.csv()`  
+- Examined structure using `str()` and `summary()`  
+- Converted `Severity` into ordered factor (Minor < Major < Fatal)  
+- Converted `Accident_Type` into categorical variable  
 
-dplyr – For data manipulation
+------------------------------------------------
 
-**Methodology**
+### 2️⃣ Visual Encoding Principles Applied
 
-Load the required R libraries.
+#### 🎨 Color Encoding (Severity)
 
-Read the traffic accident dataset from a CSV file.
+- Minor → Yellow  
+- Major → Orange  
+- Fatal → Red  
+- Stronger colors indicate higher severity levels.
 
-Examine the dataset structure and summary statistics.
+#### 📏 Size Encoding (Casualties)
 
-Convert severity and accident type into categorical variables.
+- Mapped number of casualties to point size.  
+- Larger points represent accidents with greater impact.
 
-Create a scatter plot using visual encoding techniques.
+#### 🔺 Shape Encoding (Accident Type)
 
-Apply color, size, and shape mappings to represent accident attributes.
+- Different shapes indicate different accident categories.  
+- Allows differentiation between accident types within the same plot.
 
-**Visual Encoding Techniques Used**
+------------------------------------------------
 
-Color (Severity):
+## 📊 Visualization Created
 
-Yellow → Minor
+Multi-variable scatter plot with:
 
-Orange → Major
+- **X-axis:** Number of Vehicles Involved  
+- **Y-axis:** Accident ID  
+- **Color:** Severity level  
+- **Size:** Number of casualties  
+- **Shape:** Accident type  
 
-Red → Fatal
+This combined encoding approach enables efficient exploratory data analysis of traffic risk patterns.
 
-Size (Accident Frequency):
+------------------------------------------------
 
-Point size represents the number of casualties.
+## 📈 Visualizations Generated
 
-Shape (Accident Type):
+- Multi-encoded scatter plot showing accident severity, type, and casualty distribution  
 
-Different shapes represent different accident types.
+All visualizations were created using `ggplot2`.
 
-Axes:
+------------------------------------------------
 
-X-axis → Number of Vehicles Involved
+## 🎯 Key Insights
 
-Y-axis → Accident ID
+- Fatal accidents stand out through high-intensity color encoding.  
+- High-casualty incidents are immediately identifiable through size scaling.  
+- Visual encoding allows multiple accident dimensions to be analyzed simultaneously.  
 
-**Output**
+This exercise reinforces the importance of thoughtful visual encoding in exploratory data analysis.
 
-A scatter plot visualizing traffic accidents with:
-
-Severity encoded using color
-
-Accident frequency encoded using point size
-
-Accident type encoded using shape
-
-Clear legends and labels for easy interpretation
-
-**Interpretation**
-
-The visualization enables quick identification of severe and high-impact accidents. Larger points and intense colors draw attention to critical cases, while shapes help differentiate accident types. This supports better understanding of accident patterns.
-
-**Conclusion**
-
-This experiment demonstrates how effective visual encoding improves data interpretation. By mapping severity, frequency, and type to perceptual variables, complex traffic data becomes easier to analyze and supports informed policy decisions.
